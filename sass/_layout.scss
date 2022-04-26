@@ -1,0 +1,822 @@
+.container {
+    width: 100%;
+    @include styleinflexbox(center, center);
+    .container-left {
+        @include styleinflexbox(flex-start, flex-start);
+        flex-direction: column;
+        color: $color-textintop;
+        width: 15%;
+        height: 1100px;
+        background-color: $color-background;
+        border-right: 1px solid #182434;
+        &>div {
+            margin: 30px 0 30px 25px;
+            h2,
+            h1 {
+                font-size: 1.3em;
+            }
+            ul {
+                width: 100%;
+                height: 125px;
+                margin-top: 20px;
+                list-style: none;
+                li {
+                    margin-top: 13px;
+                    a {
+                        text-decoration: none;
+                        color: $color-a-and-i-in-ul;
+                    }
+                    i {
+                        color: $color-a-and-i-in-ul;
+                    }
+                }
+            }
+        }
+    }
+    .container-right {
+        width: 85%;
+        height: 1100px;
+        background-color: $color-background;
+        @include styleinflexbox(flex-start, center);
+        flex-direction: column;
+        &>div {
+            width: 100%;
+        }
+        .topAlbums {
+            height: 75px;
+            @include styleinflexbox(space-around, center);
+            .searchbox {
+                width: 750px;
+                height: 50px;
+                border: 1px solid white;
+                position: relative;
+                right: 25px;
+                background-color: $color-backgroundinputsearch;
+                border-radius: 50px;
+                border: 1px solid $color-borderinput;
+                i.fa {
+                    color: white;
+                    font-size: 1.2em;
+                    margin-left: 5px;
+                }
+            }
+            .account {
+                position: relative;
+                right: 75px;
+                @include styleinflexbox(center, center);
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .Albums {
+            height: 700px;
+            @include styleinflexbox(flex-start, center);
+            flex-direction: column;
+            .titleinbottomAlbums {
+                width: 100%;
+                height: 100px;
+                @include styleinflexbox(space-between, center);
+                .title {
+                    margin-left: 50px;
+                    color: $color-textintop;
+                }
+            }
+            .bottomAlbums {
+                width: 100%;
+                height: 200px;
+                @include styleinflexbox(center, center);
+                flex-direction: row;
+                &>div {
+                    width: 165px;
+                    height: 200px;
+                    margin-left: 15px;
+                    border-radius: 20px 0 20px 0;
+                    @include styleinflexbox(center, center);
+                    flex-direction: column;
+                    transition: background-color ease 0.7s;
+                    p,
+                    h2 {
+                        font-size: 0.9em;
+                        margin: 3px;
+                    }
+                    img {
+                        border-radius: 20px 0 20px 0;
+                    }
+                    p {
+                        color: $color-a-and-i-in-ul;
+                    }
+                    &:hover {
+                        background-color: $color-backgroundhover;
+                    }
+                }
+            }
+        }
+        .topExplore {
+            height: 75px;
+            @include styleinflexbox(space-around, center);
+            .searchbox {
+                width: 750px;
+                height: 50px;
+                border: 1px solid white;
+                position: relative;
+                right: 25px;
+                background-color: $color-backgroundinputsearch;
+                border-radius: 50px;
+                border: 1px solid $color-borderinput;
+                i.fa {
+                    color: white;
+                    font-size: 1.2em;
+                    margin-left: 5px;
+                }
+            }
+            .account {
+                position: relative;
+                right: 75px;
+                @include styleinflexbox(center, center);
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .top {
+            height: 300px;
+            background: linear-gradient(to right, $color-gradientintop1, $color-gradientintop2);
+            @include styleinflexbox(space-around, center);
+            .textinimage {
+                @include styleinflexbox(center, flex-start);
+                flex-direction: column;
+                .Text {
+                    width: 100%;
+                    height: 250px;
+                    position: relative;
+                    top: 90px;
+                    right: 50px;
+                    color: $color-textintop;
+                    &>p {
+                        font-size: 2.3em;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .image {
+                position: relative;
+                top: 3px;
+                right: 150px;
+            }
+            .panelinleft {
+                @include styleinflexbox(flex-start, center);
+                flex-direction: column;
+                color: $color-textintop;
+                &>div {
+                    @include styleinflexbox(center, center);
+                    flex-direction: row;
+                }
+                .topinpanel {
+                    position: relative;
+                    bottom: 90px;
+                    img {
+                        border-radius: 50%;
+                    }
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+                .bootominpanel {
+                    position: relative;
+                    top: 60px;
+                    &>div {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        margin: 5px;
+                        background-color: $color-backgroundincircleactive;
+                        i.fa {
+                            position: relative;
+                            top: 17px;
+                            left: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottomArtist {
+        width: 100%;
+        height: 750px;
+        @include styleinflexbox(center, center);
+        flex-direction: column;
+        .topArtist {
+            width: 100%;
+            height: 400px;
+            @include styleinflexbox(center, center);
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            bottom: 75px;
+            &>div {
+                border: 1px solid black;
+                border-radius: 50px;
+            }
+            .one {
+                width: 500px;
+                height: 290px;
+                position: relative;
+                top: 45px;
+                left: 100px;
+                background-color: red;
+                z-index: 8;
+                transition: transform ease 1s;
+                &:hover {
+                    transform: scale(1.1);
+                    position: relative;
+                    z-index: 11;
+                }
+            }
+            .two {
+                width: 500px;
+                height: 280px;
+                background-color: blue;
+                position: relative;
+                top: 50px;
+                right: 100px;
+                transition: transform ease 1s;
+                &:hover {
+                    transform: scale(1.1);
+                    position: relative;
+                    z-index: 11;
+                }
+            }
+            .three {
+                width: 500px;
+                height: 300px;
+                background-color: green;
+                position: relative;
+                bottom: 250px;
+                left: 200px;
+                z-index: 10;
+            }
+            .four {
+                width: 500px;
+                height: 290px;
+                background-color: grey;
+                position: relative;
+                bottom: 250px;
+                right: 200px;
+                z-index: 9;
+                transition: transform ease 1s;
+                &:hover {
+                    transform: scale(1.1);
+                    position: relative;
+                    z-index: 11;
+                }
+            }
+            .five {
+                width: 500px;
+                height: 280px;
+                background-color: indigo;
+                position: relative;
+                bottom: 540px;
+                right: 250px;
+                transition: transform ease 1s;
+                &:hover {
+                    transform: scale(1.1);
+                    position: relative;
+                    z-index: 11;
+                }
+            }
+        }
+        .bottomincircle {
+            width: 100%;
+            @include styleinflexbox(center, flex-start);
+            flex-direction: column;
+            position: relative;
+            bottom: 75px;
+            .bottomtitle {
+                margin: 10px 0 0 50px;
+                color: $color-textintop;
+            }
+            .circle {
+                @include styleinflexbox(center, center);
+                flex-direction: row;
+                position: relative;
+                left: 50px;
+                &>div {
+                    margin: 10px;
+                    img {
+                        border-radius: 50%;
+                    }
+                    p {
+                        position: relative;
+                        left: 5px;
+                        color: $color-textintop;
+                    }
+                }
+            }
+        }
+    }
+    .bottominFavorite {
+        width: 100%;
+        height: 500px;
+        @include styleinflexbox(flex-start, flex-start);
+        flex-direction: column;
+        .bottominFavoriteintitle {
+            margin: 10px 0 0 50px;
+            color: $color-textintop;
+        }
+        .bottominFavoritesonge {
+            width: 100%;
+            height: 400px;
+            @include styleinflexbox(center, flex-start);
+            flex-direction: column;
+            &>div {
+                height: 150px;
+                @include styleinflexbox(space-around, center);
+                flex-direction: row;
+                margin: 5px;
+                padding: 5px;
+                color: $color-textintop;
+                position: relative;
+                left: 40px;
+                top: 10px;
+                border-radius: 20px 0 20px 0;
+                transition: background-color ease 1s;
+                &:hover {
+                    background-color: $color-backgroundhover;
+                }
+                img {
+                    border-radius: 20px 0 20px 0;
+                }
+                .text {
+                    margin-left: 10px;
+                    p:nth-child(2) {
+                        color: $color-a-and-i-in-ul;
+                        font-size: 0.9em;
+                    }
+                }
+                .Minutes {
+                    @include styleinflexbox(center, center);
+                    width: 50px;
+                    margin-left: 400px;
+                }
+                .icon {
+                    width: 50px;
+                    @include styleinflexbox(center, center);
+                    flex-direction: row;
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+    .bottomExplore {
+        width: 100%;
+        @include styleinflexbox(center, center);
+        flex-direction: column;
+        .silderinexpore {
+            width: 100%;
+            height: 400px;
+            @include styleinflexbox(center, center);
+            flex-direction: column;
+            .titleincircle {
+                width: 100%;
+                @include styleinflexbox(space-between, center);
+                flex-direction: row;
+                .title {
+                    margin-left: 50px;
+                    color: $color-textintop;
+                }
+                .circle {
+                    width: 100px;
+                    height: 75px;
+                    @include styleinflexbox(center, center);
+                    flex-direction: row;
+                    margin-right: 10px;
+                    &>div {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        background-color: rgba(255, 255, 255, 0.123);
+                        i.fa {
+                            font-size: 0.9em;
+                            position: relative;
+                            left: 12px;
+                            top: 8px;
+                        }
+                        &:nth-child(2) {
+                            background-color: $color-backgroundincircleactive;
+                        }
+                    }
+                }
+            }
+            .silderoneinbotoomExplore {
+                width: 90%;
+                height: 300px;
+                @include styleinflexbox(center, center);
+                flex-direction: row;
+                position: relative;
+                overflow-x: auto;
+                overflow-x: hidden;
+                position: relative;
+                &>div {
+                    width: 350px;
+                    height: 250px;
+                    border-radius: 50px;
+                    margin: 5px;
+                    position: relative;
+                    left: 560px;
+                    img {
+                        border-radius: 50px;
+                        width: 350px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+    .music {
+        width: 100%;
+        @include styleinflexbox(center, center);
+        flex-direction: column;
+        .titleinbottomExplore {
+            width: 100%;
+            height: 100px;
+            @include styleinflexbox(flex-start, center);
+            position: relative;
+            top: 15px;
+            .title {
+                margin-left: 50px;
+                color: $color-textintop;
+            }
+        }
+        .bottomintitle {
+            width: 100%;
+            @include styleincssgrid(flex-start, center);
+            grid-template-columns: 165px 165px 165px 165px 165px 165px;
+            position: relative;
+            right: 45px;
+            bottom: 50px;
+            &>div {
+                height: 200px;
+                margin-left: 15px;
+                border-radius: 20px 0 20px 0;
+                @include styleinflexbox(center, center);
+                flex-direction: column;
+                transition: background-color ease 0.7s;
+                p,
+                h2 {
+                    font-size: 0.9em;
+                    margin: 3px;
+                }
+                img {
+                    border-radius: 20px 0 20px 0;
+                }
+                p {
+                    color: $color-a-and-i-in-ul;
+                }
+                &:hover {
+                    background-color: $color-backgroundhover;
+                }
+            }
+        }
+    }
+}
+
+.bottommusic {
+    width: 100%;
+    height: 350px;
+    .titleinmusic {
+        height: 50px;
+        @include styleinflexbox(flex-start, center);
+        position: relative;
+        top: 15px;
+        .title {
+            margin-left: 50px;
+            color: $color-textintop;
+        }
+    }
+    .titleinbottomExplore {
+        width: 100%;
+        height: 100px;
+        @include styleinflexbox(center, center);
+        position: relative;
+        top: 15px;
+        .title {
+            color: $color-textintop;
+        }
+        .circle {
+            width: 100px;
+            height: 75px;
+            @include styleinflexbox(center, center);
+            flex-direction: row;
+            margin-right: 10px;
+            position: relative;
+            right: 100px;
+            &>div {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                margin-right: 10px;
+                background-color: rgba(255, 255, 255, 0.123);
+                i.fa {
+                    font-size: 0.9em;
+                    position: relative;
+                    left: 12px;
+                    top: 8px;
+                }
+                &:nth-child(2) {
+                    background-color: $color-backgroundincircleactive;
+                }
+            }
+        }
+    }
+}
+
+.musicpalyer {
+    width: 100%;
+    height: 375px;
+    @include styleinflexbox(center, center);
+    flex-direction: row;
+    position: relative;
+    top: 25px;
+    &>div {
+        width: 50%;
+        height: 375px;
+        @include styleinflexbox(center, center);
+        .image {
+            width: 75%;
+            height: 375px;
+            border: 1px solid black;
+            border-radius: 50px;
+        }
+    }
+    .right {
+        @include styleinflexbox(center, flex-start);
+        flex-direction: column;
+        p {
+            color: white;
+            font-size: 1.2em;
+            margin-top: 10px;
+            position: relative;
+            bottom: 45px;
+        }
+    }
+}
+
+.titleinbotoomExplore {
+    width: 100%;
+    height: 100px;
+    @include styleinflexbox(space-between, center);
+    position: relative;
+    top: 15px;
+    .title {
+        color: $color-textintop;
+        margin-left: 50px;
+    }
+}
+
+.silderbotoomExplore {
+    width: 100%;
+    @include styleincssgrid(center, center);
+    grid-template-columns: 165px 165px 165px 165px 165px 165px;
+    position: relative;
+    right: 45px;
+    overflow-x: auto;
+    &>div {
+        height: 200px;
+        margin-left: 5px;
+        padding: 10px;
+        border-radius: 20px 0 20px 0;
+        @include styleinflexbox(center, center);
+        flex-direction: column;
+        transition: background-color ease 0.7s;
+        p,
+        h2 {
+            font-size: 0.9em;
+            margin: 3px;
+        }
+        img {
+            border-radius: 20px 0 20px 0;
+            width: 125px;
+            height: 125px;
+        }
+        p {
+            color: $color-a-and-i-in-ul
+        }
+        &:hover {
+            background-color: $color-backgroundhover;
+        }
+    }
+}
+
+.bottom {
+    height: 700px;
+    @include styleinflexbox(flex-start, center);
+    flex-direction: column;
+    color: $color-textintop;
+    .titleincircle {
+        width: 100%;
+        height: 100px;
+        @include styleinflexbox(space-between, center);
+        .title {
+            margin-left: 50px;
+        }
+        .circle {
+            width: 100px;
+            height: 75px;
+            @include styleinflexbox(center, center);
+            flex-direction: row;
+            margin-right: 10px;
+            &>div {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                margin-right: 10px;
+                background-color: rgba(255, 255, 255, 0.123);
+                i.fa {
+                    font-size: 0.9em;
+                    position: relative;
+                    left: 12px;
+                    top: 8px;
+                }
+                &:nth-child(2) {
+                    background-color: $color-backgroundincircleactive;
+                }
+            }
+        }
+    }
+    .silder {
+        width: 90%;
+        height: 250px;
+        @include styleinflexbox(center, center);
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-x: hidden;
+        &>div {
+            width: 200px;
+            height: 200px;
+            margin-left: 5px;
+            padding: 10px;
+            border-radius: 20px 0 20px 0;
+            @include styleinflexbox(center, center);
+            flex-direction: column;
+            transition: background-color ease 0.7s;
+            p,
+            h2 {
+                font-size: 0.9em;
+                margin: 3px;
+            }
+            img {
+                border-radius: 20px 0 20px 0;
+                width: 125px;
+                height: 125px;
+            }
+            p {
+                color: $color-a-and-i-in-ul;
+            }
+            &:hover {
+                background-color: $color-backgroundhover;
+            }
+        }
+    }
+    .musicinbottom {
+        width: 100%;
+        height: 400px;
+        @include styleinflexbox(center, flex-start);
+        flex-direction: row;
+        &>div {
+            width: 50%;
+            margin: 50px;
+            @include styleinflexbox(flex-start, flex-start);
+            flex-direction: column;
+        }
+        .right {
+            height: 400px;
+            .musicinbottomtorightinbottom {
+                width: 100%;
+                height: 375px;
+                @include styleinflexbox(center, flex-start);
+                flex-direction: column;
+                &>div {
+                    width: 100%;
+                    height: 60px;
+                    margin-top: 10px;
+                    @include styleinflexbox(space-between, center);
+                    flex-direction: row;
+                    img {
+                        border-radius: 0 20px 0 20px;
+                    }
+                    .text {
+                        position: relative;
+                        right: 100px;
+                        p:nth-child(2) {
+                            color: $color-a-and-i-in-ul;
+                            font-size: 0.9em;
+                        }
+                    }
+                    .icon {
+                        @include styleinflexbox(center, center);
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+        .left {
+            height: 200px;
+            @include styleinflexbox(center, flex-start);
+            flex-direction: column;
+            .circle {
+                width: 100%;
+                height: 200px;
+                @include styleinflexbox(center, center);
+                margin-bottom: 25px;
+                &>div {
+                    width: 95px;
+                    height: 95px;
+                    border-radius: 50%;
+                    margin: 0 2px;
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container-musicplayer {
+    width: 100%;
+    height: 75px;
+    @include styleinflexbox(flex-start, center);
+    flex-direction: row;
+    background: $color-background;
+    border: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    .imageintext {
+        width: 25%;
+        height: 75px;
+        @include styleinflexbox(center, center);
+        flex-direction: row;
+        img {
+            border-radius: 0 20px 0 20px;
+            position: relative;
+            right: 10px;
+        }
+        p:nth-child(1) {
+            color: $color-textintop;
+        }
+        p {
+            color: $color-a-and-i-in-ul;
+        }
+    }
+    .palyandpuse {
+        width: 12%;
+        height: 75px;
+        @include styleinflexbox(center, center);
+        flex-direction: row;
+        position: relative;
+        right: 35px;
+        top: 5pxfff;
+        &>div {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            &:hover {
+                background-color: $color-backgroundhover;
+                opacity: 0.5;
+                border-radius: 0 20px 0 20px;
+            }
+        }
+    }
+    .sildebar {
+        width: 35%;
+        height: 75px;
+        @include styleinflexbox(center, center);
+        flex-direction: row;
+        color: $color-textintop;
+        .silderbarmusic {
+            width: 500px;
+            height: 5px;
+        }
+    }
+    .Voice {
+        width: 15%;
+        height: 75px;
+        @include styleinflexbox(center, center);
+        flex-direction: row;
+        color: $color-textintop;
+        position: relative;
+        left: 50px;
+        .Voicemusic {
+            width: 150px;
+            height: 5px;
+            margin-left: 3px;
+        }
+    }
+}
+

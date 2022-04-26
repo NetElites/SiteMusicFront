@@ -1,0 +1,45 @@
+$color-background:#0e1a2a;
+$color-gradientintop1:#08d9d3;
+$color-gradientintop2:#5665f6;
+$color-textsearch:#7ef6f5;
+$color-textintop:white;
+$color-a-and-i-in-ul:#3d4959;
+$color-backgroundincircleactive:#625afb;
+$color-backgroundhover:#152034;
+$color-backgroundinputsearch:#39393949;
+$color-borderinput:#707070;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: ltr;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+@mixin styleinflexbox($justify-content, $align-item) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
+
+@mixin styleinbutton {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: $color-textintop;
+    border-radius: 0 20px 0 20px;
+}
+
+@mixin styleincssgrid($justify-content, $align-item) {
+    display: grid;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
+
+i {
+    color: white;
+}

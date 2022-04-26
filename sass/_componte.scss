@@ -1,0 +1,56 @@
+.search {
+    width: 100%;
+    height: 50px;
+    color: $color-textsearch;
+    position: relative;
+    top: 80px;
+    right: 50px;
+    .searchbox {
+        @include styleinbutton;
+        background-color: $color-gradientintop1;
+        border-radius: 50px;
+        padding: 5px;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+.button {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    bottom: 40px;
+    right: 50px;
+    .buttoninzior {
+        width: 250px;
+        height: 50px;
+        @include styleinbutton;
+        opacity: 0.5;
+        padding-right: 100px;
+        cursor: pointer;
+        outline: none;
+    }
+    .buttoninone {
+        width: 90px;
+        height: 40px;
+        @include styleinbutton;
+        position: relative;
+        right: 100px;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+.inputsearch {
+    width: 700px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: transparent;
+    position: relative;
+    right: 5px;
+    direction: ltr;
+}
